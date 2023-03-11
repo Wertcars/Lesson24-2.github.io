@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Drawing Program</h1>
-    <canvas id = "imgCanvas"></canvas>
+    <canvas id = "imgCanvas" width = "600" height = "400" onclick="draw(event)"></canvas>
         
     <script>
         function draw(event){
@@ -17,6 +17,10 @@
             var rect = canvas.getBoundingClientRect();
             var pos_x = event.clientX - rect.left;
             var pos_y = event.clientY - rect.top;
+            ctx.fillStyle = "#a24627";
+            ctx.beginPath();
+            ctx.arc(pos_x, pos_t, 50, 0, Math.PI * 2);
+            ctx.fill()
         }
     </script>
 </body>
