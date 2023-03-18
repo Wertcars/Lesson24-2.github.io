@@ -15,12 +15,12 @@
             var canvas = document.getElementById("imgCanvas");
             var ctx = canvas.getContext("2d");
             var rect = canvas.getBoundingClientRect();
-            var pos_x = event.clientX - rect.left;
-            var pos_y = event.clientY - rect.top;
+            var posx = event.clientX - rect.left;
+            var posy = event.clientY - rect.top;
             ctx.fillStyle = "#a24627";
             ctx.beginPath();
-            ctx.arc(pos_x, pos_t, 50, 0, Math.PI * 2);
-            ctx.fill()
+            ctx.arc(posx, posy, 50, 0, Math.PI * 2);
+            ctx.fill();
         }
     </script>
 </body>
